@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static 'assets/images/logo-556x186.png' %}" type="image/x-icon">
+  <meta name="description" content="Always on your mind">
+  
+  
+  <title>Cruzos</title>
+  <link rel="stylesheet" href="{% static 'assets/font-awesome-solid/../css/fontawesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/font-awesome-solid/css/solid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons2/mobirise2.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/facebook-plugin/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/web/assets/gdpr-plugin/gdpr-styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}"><link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="menu cid-s3Y6jVizGr" once="menu" id="menu1-1w">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="index.html#tabs2-6">
+                         <img src="{% static 'assets/images/cruzos.png' %}" alt="logo" title="" style="height: 4.8rem;">
+                    </a>
+                </span>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="#"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
+                        Home</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{% url 'services' %}#services1-1f"><span class="mbri-briefcase mbr-iconfont mbr-iconfont-btn"></span>
+                        Services</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{% url 'cart_detail' %}"><span class="mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span>
+                    Cart</a></li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-7" href="{% url 'contactus' %}"><span class="mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn"></span>
+                        Contact us &nbsp;</a>
+                </li></ul>
+            
+        </div>
+    </nav>
+</section>
+
+<section class="cid-qxF9tMPSBX mbr-fullscreen mbr-parallax-background" id="header2-0">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(43, 7, 76);"></div>
+
+    <div class="container align-center">
+        <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">CRUZOS</h1>
+                
+                <p class="mbr-text pb-3 mbr-fonts-style display-2">Always on your mind</p>
+                
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section class="services1 aaaa cid-s3TJejozmM" id="services1-z">
+    <div class="container-fluid bbbb" style="padding-top:90px; padding-bottom: 90px; padding-left:50px; padding-right:50px;">
+        <div class="row justify-content-center">
+            <div class="title pb-5 col-12">
+                <h2 class="align-left pb-3 mbr-fonts-style display-1">
+                    Our Shop
+                </h2>
+                
+            </div>
+            {% for i in mpc %}
+            <div class="card col-12 col-md-6 p-3 col-lg-3">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="{% url 'product' value=i.id %}#services1-1l"><img src="{{i.img.url}}" alt="{{i.img_alt}}" title="" width="400" height="300"></a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title mbr-fonts-style display-5"><a href="{% url 'product' value=i.id %}#services1-1l"><strong>{{i.heading}}</strong></a><em><strong></strong></em></h4>
+                        <p class="mbr-text mbr-fonts-style display-7"><a href="{% url 'product' value=i.id %}#services1-1l">{{i.desc}}&nbsp;</a></p>
+                        <!--Btn-->
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="header12 cid-s3XOSSbppC" id="header12-1d">
+
+    
+
+    
+
+    <div class="container aaaa" style="padding-top:50px; padding-bottom:100px;">
+            <div class="media-container ">
+                <div class="col-md-12 align-center">
+                    <h1 class="mbr-section-title pb-3 mbr-white mbr-bold mbr-fonts-style display-1">Why Choose Us</h1>
+                    
+                    
+
+                    <div class="icons-media-container mbr-white">
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                            
+                                <span class="mbr-iconfont mbrib-speed"></span>
+                            
+                            </div>
+                            <h5 class="mbr-fonts-style display-2">Speedy Delivery<br><br></h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                                
+                                    <span class="mbr-iconfont mbri-like"></span>
+                                
+                            </div>
+                            <h5 class="mbr-fonts-style display-2">Best Quality<br><br></h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                                
+                                    <span class="mbr-iconfont fa-money-check-alt fas fa-fw"></span>
+                                
+                            </div>
+                            <h5 class="mbr-fonts-style display-2">
+                                Easy Payment</h5>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    
+</section>
+
+<section once="footers" class="cid-s3TB5KTsah" id="footer7-x">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="mbr-bold text-primary" href="index.html#header12-1d">About us
+                    </a></li>
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="mbr-bold text-primary" href="{% url 'services' %}#services1-1f" target="_blank">Services</a>
+                    </li>
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="mbr-bold text-primary" href="tel:+91-8879565999">Get In Touch</a>
+                    </li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    
+                    
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="https://www.instagram.com/cruzos.in?r=nametag" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.facebook.com/pg/cruzos.in/about/" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://wa.me/message/3IZ5Q26UGAGFP1" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-whatsapp socicon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                        Made by <a href="http://www.zapped.in/" class="text-primary">Zapped </a> © Copyright 2020 - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/popper/popper.min.js' %}"></script>
+  <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/facebook-plugin/facebook-script.js' %}"></script>
+  <script src="{% static 'assets/vimeoplayer/jquery.mb.vimeo_player.js' %}"></script>
+  <script src="{% static 'assets/dropdown/js/nav-dropdown.js' %}"></script>
+  <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+  <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'assets/tether/tether.min.js' %}"></script>
+  <script src="{% static 'assets/parallax/jarallax.min.js' %}"></script>
+  <script src="{% static 'assets/witsec-mailform/witsec-mailform.js' %}"></script>
+  <script src="{% static 'assets/theme/js/script.js' %}"></script>
+  
+  
+</body>
+</html>

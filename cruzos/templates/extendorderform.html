@@ -1,0 +1,25 @@
+{% extends "orderform.html" %} 
+
+{% block content %} 
+<section class="mbr-section form1 cid-s3Y4Jq3vgh" style="padding-top:225px; padding-bottom:225px; text-align:center;
+" id="form1-1q">
+        <form action="{% url 'payment_status' %}" style="font-size:40px;" method="POST">
+        {% csrf_token %}  
+        <script src="https://checkout.razorpay.com/v1/checkout.js" 
+                data-key="rzp_test_di7k5vD6oRZtV5"
+                data-amount="{{ price }}"
+                data-currency="INR"
+                data-order_id="{{ order_id }}"
+                data-buttontext="Pay by UPI/ Card/ Netbanking/ Wallet"
+                data-name="Acme Corp"
+                data-description="Test transaction"
+                data-image=" any link"
+                data-prefill.name="{{ name }}"
+                data-prefill.email="{{ email }}"
+                data-prefill.contact="{{ phone }}"
+                data-theme.color="#F37254"></script>
+        <input type="hidden" custom="hidden Element" name="hidden">
+        </form>
+</section>
+
+{% endblock %}
